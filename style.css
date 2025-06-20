@@ -12,13 +12,21 @@ body {
     font-family: system-ui, sans-serif; /*font (might need to modify later on)*/
 
     background:
-        url("_assets/Background_decorateArrow.png")   center / 1074px 2155px no-repeat,
-        url("_assets/Background_leftside.png")        center / 1100px 2277px no-repeat,
-        url("_assets/planet.png")                     center / 1100px 967px no-repeat,
-        url("_assets/Background.png")                 center / 1100px 2280px no-repeat;
+        url("_assets/Background_decorateArrow.png") center no-repeat,
+        url("_assets/Background_leftside.png")      center no-repeat,
+        url("_assets/planet.png")                   center no-repeat,
+        url("_assets/Background.png")               center no-repeat;
+    background-size: 1074px 2155px, 1100px 2277px, 1100px 967px, 1100px 2280px;
 }
 
-/* -----Navigator----- */
+/* mobile */
+@media (max-width: 600px) {
+    body {
+        background-size: 90vw auto;
+    }
+}
+
+/* ----- Navigator ----- */
 nav {
     position: fixed;
     top: 0;
@@ -36,9 +44,9 @@ nav {
         font-weight: 600;
     }
 
-/* ----- common section style ----- */
+/* ----- general section style ----- */
 section {
-    min-height: 100vh; /* length of each section */
+    min-height: 50vh; /* length of each section */
     padding: 4rem 1.5rem 2rem;
     display: flex;
     flex-direction: column;
