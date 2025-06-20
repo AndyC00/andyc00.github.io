@@ -1,0 +1,9 @@
+body {
+    min-height: 200vh;
+
+    background:
+        url("_assets/Background_decorateArrow.png")   center / 1074px 2155px no-repeat,
+        url("_assets/Background_leftside.png")        center / 1100px 2277px no-repeat,
+        url("_assets/planet.png")                     center / 1100px 967px no-repeat,
+        url("_assets/Background.png")                 center / 1100px 2280px no-repeat;
+}
