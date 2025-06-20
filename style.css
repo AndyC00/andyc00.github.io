@@ -1,5 +1,15 @@
+/*Gloabl settings*/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    min-height: 200vh;
+    margin: 0;
+    font-family: system-ui, sans-serif; /*font (might need to modify later on)*/
 
     background:
         url("_assets/Background_decorateArrow.png")   center / 1074px 2155px no-repeat,
@@ -7,3 +17,67 @@ body {
         url("_assets/planet.png")                     center / 1100px 967px no-repeat,
         url("_assets/Background.png")                 center / 1100px 2280px no-repeat;
 }
+
+/* -----Navigator----- */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(6px);
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 10;
+}
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+/* ----- common section style ----- */
+section {
+    min-height: 100vh; /* length of each section */
+    padding: 4rem 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* position of section */
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* sections */
+#about {
+    background: rgba(0,0,0,.35);
+}
+
+#project1 {
+    background: rgba(0,0,0,.45);
+}
+
+#project2 {
+    background: rgba(0,0,0,.35);
+}
+
+#gallery {
+    background: rgba(0,0,0,.45);
+}
+
+/* button */
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .75rem 1.5rem;
+    border-radius: 6px;
+    background: #ff6f61;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity .25s;
+}
+
+    .btn:hover {
+        opacity: .8;
+    }
