@@ -16,7 +16,7 @@ body {
         url("_assets/Background_leftside.png")      center no-repeat,
         url("_assets/planet.png")                   center no-repeat,
         url("_assets/Background.png")               center no-repeat;
-    background-size: 1074px 2155px, 1100px 2277px, 1100px 967px, 1100px 2280px;
+    background-size: cover, cover, cover, cover;
 }
 
 /* mobile */
