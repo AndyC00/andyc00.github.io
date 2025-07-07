@@ -12,7 +12,10 @@ body {
     font-family: system-ui, sans-serif; /*font (might need to modify later on)*/
 
     background: url("_assets/Background_decorateArrow.png") center no-repeat, url("_assets/Background_leftside.png") center no-repeat, url("_assets/planet.png") center no-repeat, url("_assets/Background.png") center no-repeat;
-    background-size: cover, cover, cover, cover;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: center center, center center, center -300%, center center;
+    background-size: cover, cover, clamp(250px, 100vw, 1100px) auto, cover;
+    background-attachment: scroll, scroll, fixed, scroll;
 }
 
 /* mobile */
@@ -24,15 +27,16 @@ body {
 
 /* ----- Navigator ----- */
 nav {
-    position: fixed;
-    top: 2rem;
-    left: 2rem;
-    width: 210px;
-    padding: 130px 1.5rem 1.5rem;
+    position: absolute;
+    top: 0;
+    right: 10%;
+    width: 399px;
+    padding: 170px 1.5rem 1.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     gap: 1rem;
+    gap: 4rem;
     z-index: 999;
 }
 
@@ -46,41 +50,40 @@ nav {
     pointer-events: none;
 }
 
+/* buttons */
 nav a {
-    width: 100%;
-    height: 48px;
+    width: 69%;
+    height: 40px;
     position: relative;
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: .75rem 1.5rem;
     font-weight: 600;
     color: #fff;
     text-decoration: none;
     overflow: hidden;
+    transition: transform .3s;
 }
 
-        nav a::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: url("_assets/index_block.png") center / contain no-repeat;
-            z-index: -1;
-            transition: transform .3s;
-        }
-
-        nav a:hover::before {
-            transform: scale(1.05);
-        }
-
-@media (max-width:600px) {
-    nav {
-        width: 180px;
-        padding: 110px 1rem 1rem;
-        left: 1rem;
+    nav a:hover {
+        transform: scale(1.05);
     }
 
-        nav a {
-            font-size: .9rem;
-        }
+    /* button decoration */
+    nav a::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("_assets/index_block.png") center / contain no-repeat;
+        z-index: -1;
+    }
+
+@media (max-width:600px) {
+    nav a {
+        font-size: .9rem;
+        height: 40px;
+    }
 }
 
 /* ----- general section style ----- */
