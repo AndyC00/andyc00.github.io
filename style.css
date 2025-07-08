@@ -72,6 +72,12 @@ nav a {
         z-index: -1;
     }
 
+
+/* ----- About ----- */
+.about {
+    color: #fff;
+}
+
 /* ----- general section style ----- */
 section {
     min-height: 50vh; /* length of each section */
@@ -85,10 +91,6 @@ section {
 }
 
 /* sections */
-#about {
-    background: rgba(0,0,0,0);
-}
-
 #project1 {
     background: rgba(0,0,0,0);
 }
@@ -121,15 +123,25 @@ section {
 
 /* ----- size adjustment ----- */
 @media (max-width:600px) {
-
+    /* font size: */
     html {
         font-size: 93.75%; /* 15px */
     }
-
     @media (max-width:380px) {
         html {
-            font-size: 87.5%;
+            font-size: 87.5%; /* 14px */
         }
+    }
+
+    /* main body */
+    nav {
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: clamp(240px, 80vw, 360px);
+        padding: clamp(110px, 28vw, 170px) 0.75rem 1rem;
+        align-items: center;
+        gap: clamp(.5rem, 2.5vw, 1rem);
     }
         nav::before {
             background-size: contain;
