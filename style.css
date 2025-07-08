@@ -18,13 +18,6 @@ body {
     background-attachment: scroll, scroll, fixed, scroll;
 }
 
-/* mobile */
-@media (max-width: 600px) {
-    body {
-        background-size: 90vw auto;
-    }
-}
-
 /* ----- Navigator ----- */
 nav {
     position: absolute;
@@ -79,13 +72,6 @@ nav a {
         z-index: -1;
     }
 
-@media (max-width:600px) {
-    nav a {
-        font-size: .9rem;
-        height: 40px;
-    }
-}
-
 /* ----- general section style ----- */
 section {
     min-height: 50vh; /* length of each section */
@@ -100,19 +86,19 @@ section {
 
 /* sections */
 #about {
-    background: rgba(0,0,0,.35);
+    background: rgba(0,0,0,0);
 }
 
 #project1 {
-    background: rgba(0,0,0,.45);
+    background: rgba(0,0,0,0);
 }
 
 #project2 {
-    background: rgba(0,0,0,.35);
+    background: rgba(0,0,0,0);
 }
 
 #gallery {
-    background: rgba(0,0,0,.45);
+    background: rgba(0,0,0,0);
 }
 
 /* button */
@@ -131,3 +117,33 @@ section {
     .btn:hover {
         opacity: .8;
     }
+
+
+/* ----- size adjustment ----- */
+@media (max-width:600px) {
+
+    html {
+        font-size: 93.75%; /* 15px */
+    }
+
+    @media (max-width:380px) {
+        html {
+            font-size: 87.5%;
+        }
+    }
+        nav::before {
+            background-size: contain;
+        }
+
+        nav a {
+            width: 90%;
+            height: clamp(38px, 10vw, 44px);
+            font-size: clamp(.85rem, 3.5vw, .95rem);
+            padding: .5rem 0;
+        }
+
+    body {
+        background-size: cover, cover, 80vw auto, cover; /* arrow, leftside, planet, wallpaper */
+    }
+}
+
