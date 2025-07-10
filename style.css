@@ -1,4 +1,8 @@
 ﻿/*Gloabl settings*/
+:root {
+    --navHeight: 727px;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -11,12 +15,23 @@ body {
     margin: 0;
     font-family: system-ui, sans-serif; /*font (might need to modify later on)*/
 
-    background: url("_assets/Background_decorateArrow.png") center no-repeat, url("_assets/Background_leftside.png") center no-repeat, url("_assets/planet.png") center no-repeat, url("_assets/Background.png") center no-repeat;
+    background: url("_assets/Background_decorateArrow.png") center no-repeat,
+                url("_assets/Background_leftside.png") center no-repeat,
+                url("_assets/planet.png") center no-repeat,
+                url("_assets/Background.png") center no-repeat;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-position: center center, center center, center calc(50% + 45vh), center center;
     background-size: cover, cover, 100vw auto, cover;
     background-attachment: scroll, scroll, fixed, scroll;
+
+    padding-top: var(--navHeight);
 }
+
+p.limited {
+    max-width: 50ch;
+    overflow-wrap: break-word;
+}
+
 
 /* ----- Navigator ----- */
 nav {
@@ -30,6 +45,8 @@ nav {
     align-items: flex-end;
     gap: 4rem;
     z-index: 999;
+
+    height: var(--navHeight);
 }
 
 .NavBackground {
@@ -76,8 +93,18 @@ nav a {
 .about {
     position: absolute;
     top: 0;
-    right: calc(50% + 5%);
+    right: calc(50% - 5%);
+    color: #fff;
+    margin: 0;
 }
+
+    .about .texts {
+        margin-left: 9rem;
+    }
+
+        .about .texts p + h1 {
+            margin-top: 4rem;
+        }
 
 /* ----- general section style ----- */
 section {
