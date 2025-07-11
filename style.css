@@ -151,6 +151,12 @@ section {
 
 /* ----- size adjustment ----- */
 @media (max-width:600px) {
+    nav {
+        display: none;
+    }
+
+/*Todo: all component change to smaller size and stay in the center*/
+
     /* font size: */
     html {
         font-size: 93.75%; /* 15px */
