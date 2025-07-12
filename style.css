@@ -44,7 +44,6 @@ nav {
     flex-direction: column;
     align-items: flex-end;
     gap: 4rem;
-    z-index: 999;
 
     height: var(--navHeight);
 }
@@ -96,6 +95,8 @@ nav a {
     right: calc(50% - 5%);
     color: #fff;
     margin: 0;
+
+    z-index: 1;
 }
 
     .about .texts {
@@ -106,8 +107,13 @@ nav a {
             margin-top: 4rem;
         }
 
+    .about a{
+        text-decoration: none;
+        color: #0079fb;
+    }
 /* ----- general section style ----- */
 section {
+    position: relative;
     min-height: 50vh; /* length of each section */
     padding: 4rem 1.5rem 2rem;
     display: flex;
