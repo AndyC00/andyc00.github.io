@@ -131,7 +131,10 @@ section {
     background: rgba(0,0,0,0);
 }
 #project1 .bg {
-    background: url("_assets/project_block.png") center / contain no-repeat;
+    display:inline-block;
+    width: fit-content;
+    padding: .25em .75em;
+    background: url("_assets/project_block.png") center / 100% 100% no-repeat;
 }
 
 #project2 {
