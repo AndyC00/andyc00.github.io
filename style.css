@@ -155,41 +155,37 @@ section {
         display: none;
     }
 
-/*Todo: all component change to smaller size and stay in the center*/
-
-    /* font size: */
     html {
         font-size: 93.75%; /* 15px */
     }
+
+    body {
+        background-size: 100vw auto, 100vw auto, 100% auto, cover; /* arrow, leftside, planet, wallpaper */
+        align-items:center;
+        padding-top: 0;
+    }
+
+    .about{
+        position: static;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+    }
+    .about .texts {
+        margin: 0;
+    }
+    .about .texts .limited{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section{
+        width: 100%;
+    }
+}
+
     @media (max-width:380px) {
         html {
             font-size: 87.5%; /* 14px */
         }
     }
-
-    /* main body */
-    nav {
-        top: 1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        width: clamp(240px, 80vw, 360px);
-        padding: clamp(110px, 28vw, 170px) 0.75rem 1rem;
-        align-items: center;
-        gap: clamp(.5rem, 2.5vw, 1rem);
-    }
-        nav::before {
-            background-size: contain;
-        }
-
-        nav a {
-            width: 90%;
-            height: clamp(38px, 10vw, 44px);
-            font-size: clamp(.85rem, 3.5vw, .95rem);
-            padding: .5rem 0;
-        }
-
-    body {
-        background-size: cover, cover, 80vw auto, cover; /* arrow, leftside, planet, wallpaper */
-    }
-}
-
