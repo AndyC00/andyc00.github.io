@@ -1,10 +1,11 @@
-﻿/*Gloabl settings*/
+﻿/* ---------- Gloabl settings ---------- */
 :root {
     --navHeight: 727px;
 }
 
 * {
     box-sizing: border-box;
+    color: #fff;
 }
 
 html {
@@ -33,7 +34,7 @@ p.limited {
 }
 
 
-/* ----- Navigator ----- */
+/* ---------- Navigator ---------- */
 nav {
     position: absolute;
     top: 0;
@@ -88,12 +89,11 @@ nav a {
     }
 
 
-/* ----- About ----- */
+/* ---------- About ---------- */
 .about {
     position: absolute;
     top: 0;
     right: calc(50% - 5%);
-    color: #fff;
     margin: 0;
 
     z-index: 1;
@@ -110,8 +110,10 @@ nav a {
     .about a{
         text-decoration: none;
         color: #0079fb;
+        font-weight: bold;
     }
-/* ----- general section style ----- */
+
+/* ---------- project sections style ---------- */
 section {
     position: relative;
     min-height: 50vh; /* length of each section */
@@ -127,6 +129,9 @@ section {
 /* sections */
 #project1 {
     background: rgba(0,0,0,0);
+}
+#project1 .bg {
+    background: url("_assets/project_block.png") center / contain no-repeat;
 }
 
 #project2 {
@@ -155,7 +160,7 @@ section {
     }
 
 
-/* ----- size adjustment ----- */
+/* ---------- screen size adjustment ---------- */
 @media (max-width:600px) {
     nav {
         display: none;
