@@ -144,7 +144,7 @@ section {
 
 #project1 .title {
     position: absolute;
-    top: 27%;
+    top: 30%;
     left: 25%;
     padding: .25em .75em;
 
@@ -153,12 +153,25 @@ section {
     z-index: -1
 }
 
-#project2 {
-    background: rgba(0,0,0,0);
+#project1 .btn {
+    position: absolute;
+    bottom: 4%;
+    right: 10%;
+
+    background: url("_assets/project_block.png") center / 100% 100% no-repeat;
+    color: #fff;
+    padding: .75rem 1.5rem;
+    border-radius:0; 
 }
 
+/* ---------- project 2 */
+#project2 {
+    
+}
+
+/* ---------- project 3 */
 #gallery {
-    background: rgba(0,0,0,0);
+    
 }
 
 /* button */
