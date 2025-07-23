@@ -22,7 +22,7 @@ body {
                 url("_assets/Background.png") center no-repeat;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-position: center center, center center, center calc(50% + 45vh), center center;
-    background-size: cover, cover, 100vw auto, cover;
+    background-size: 100vw auto, 100vw auto, 100vw auto, cover;
     background-attachment: scroll, scroll, fixed, scroll;
 
     padding-top: var(--navHeight);
@@ -126,15 +126,31 @@ section {
     color: #fff;
 }
 
-/* sections */
+/* ---------- project 1 */
 #project1 {
-    background: rgba(0,0,0,0);
+    position: relative;
+    display: block;
+    width:  fit-content;
+    margin: 0 auto;
+    padding: 0; 
 }
-#project1 .bg {
-    display:inline-block;
-    width: fit-content;
+
+#project1 .project_background {
+    display: block;
+    width:  auto;
+    height: auto;
+    max-width: 100%;
+}
+
+#project1 .title {
+    position: absolute;
+    top: 27%;
+    left: 25%;
     padding: .25em .75em;
+
     background: url("_assets/project_block.png") center / 100% 100% no-repeat;
+    font-size: clamp(1.25rem, 2vw + .5rem, 2.5rem);
+    z-index: -1
 }
 
 #project2 {
@@ -164,6 +180,12 @@ section {
 
 
 /* ---------- screen size adjustment ---------- */
+@media (max-width: 768px) {
+    #project1 .project_background{
+        width: 100%;
+    }
+}
+
 @media (max-width:600px) {
     nav {
         display: none;
