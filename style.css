@@ -117,8 +117,10 @@ nav a {
 section {
     position: relative;
     min-height: 50vh; /* length of each section */
-    padding: 4rem 1.5rem 2rem;
-    display: flex;
+    display: block;
+    width:  fit-content;
+    margin: 0 auto;
+    padding: 0; 
     flex-direction: column;
     justify-content: center; /* position of section */
     align-items: center;
@@ -127,22 +129,15 @@ section {
 }
 
 /* ---------- project 1 */
-#project1 {
-    position: relative;
-    display: block;
-    width:  fit-content;
-    margin: 0 auto;
-    padding: 0; 
-}
 
-#project1 .project_background {
+section .project_background {
     display: block;
     width:  auto;
     height: auto;
     max-width: 100%;
 }
 
-#project1 .title {
+section .title {
     position: absolute;
     top: 30%;
     left: 25%;
@@ -153,7 +148,7 @@ section {
     z-index: -1
 }
 
-#project1 .btn {
+section .btn {
     position: absolute;
     bottom: 4%;
     right: 10%;
@@ -171,7 +166,7 @@ section {
 
 /* ---------- project 3 */
 #gallery {
-    
+
 }
 
 /* button */
@@ -194,7 +189,7 @@ section {
 
 /* ---------- screen size adjustment ---------- */
 @media (max-width: 768px) {
-    #project1 .project_background{
+    section .project_background{
         width: 100%;
     }
 }
