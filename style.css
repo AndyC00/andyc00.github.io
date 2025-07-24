@@ -1,8 +1,4 @@
 ﻿/* ---------- Gloabl settings ---------- */
-:root {
-    --navHeight: 727px;
-}
-
 * {
     box-sizing: border-box;
     color: #fff;
@@ -18,15 +14,13 @@ body {
     /*font (might need to modify later on)*/
 
     background: url("_assets/Background_decorateArrow.png") center no-repeat,
-        url("_assets/Background_leftside.png") center no-repeat,
-        url("_assets/planet.png") center no-repeat,
-        url("_assets/Background.png") center no-repeat;
+                url("_assets/Background_leftside.png") center no-repeat,
+                url("_assets/planet.png") center no-repeat,
+                url("_assets/Background.png") center no-repeat;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-position: center center, center center, center calc(50% + 45vh), center center;
     background-size: 100vw auto, 100vw auto, 100vw auto, cover;
     background-attachment: scroll, scroll, fixed, scroll;
-
-    padding-top: var(--navHeight);
 }
 
 p.limited {
@@ -46,8 +40,6 @@ nav {
     flex-direction: column;
     align-items: flex-end;
     gap: 4rem;
-
-    height: var(--navHeight);
 }
 
 .NavBackground {
@@ -92,12 +84,33 @@ nav a::before {
 
 /* ---------- About ---------- */
 .about {
-    position: absolute;
-    top: 0;
-    right: calc(50% - 5%);
-    margin: 0;
+    position: relative;
+    display: flex;
+    flex-direction:column; 
+    align-items: center;
+    right: 17%;
+    gap: 2rem;
+}
 
-    z-index: 1;
+.about .PortraitBg {
+    position: relative;
+    flex: 0 0 412px;
+    aspect-ratio: 439/412;
+    background: url("_assets/PortraitBackground.png") center / contain no-repeat;
+    z-index: 0;
+}
+
+.about .Portrait {
+    position:absolute;
+    left: 52%;
+    top: 54%;
+    transform: translate(-50%, -50%);
+    height: 60%;
+    width: auto;
+    object-fit:cover;
+    overflow: hidden;
+    z-index:1;
+    border-radius:12px;
 }
 
 .about .texts {
@@ -185,7 +198,6 @@ section .slideshow img.show {
 /* ---------- project 1 ---------- */
 #project1 {
     margin-bottom: -15%;
-    margin-top: 5%;
 }
 
 #project1 .project_background{
