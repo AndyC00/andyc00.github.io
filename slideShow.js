@@ -1,14 +1,13 @@
-// ===== Project-1 Auto-Slideshow =====
-(function(){
-    const slides = document.querySelectorAll('#section .slideshow img');
-    if(!slides.length) return;
+document.querySelectorAll('.slideshow').forEach(slider => {
+    const imgs = slider.querySelectorAll('img');
+    if (!imgs.length)   return;
 
     let i = 0;
-    slides[0].classList.add('show');
+    imgs[0].classList.add('show');
 
-    setInterval(()=>{
-        slides[i].classList.remove('show');
-        i = (i + 1) % slides.length;
-        slides[i].classList.add('show');
-    }, 3000);   // 3000 -> 3s per picture
-})();
+    setInterval(() => {
+        imgs[i].classList.remove('show');
+        i = (i + 1) % imgs.length;  //back to the first image when last img finished
+        imgs[i].classList.add('show');
+    }, 3000)    // 3 sec per picture
+});

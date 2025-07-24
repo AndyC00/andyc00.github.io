@@ -146,7 +146,7 @@ section .title {
 
     background: url("_assets/project_block.png") center / 100% 100% no-repeat;
     font-size: clamp(1.25rem, 2vw + .5rem, 2.5rem);
-    z-index: -1
+    z-index: 2;
 }
 
 section .btn {
@@ -158,14 +158,11 @@ section .btn {
     color: #fff;
     padding: .75rem 1.5rem;
     border-radius: 0;
+    z-index: 2;
 }
 
 section .slideshow {
     position: absolute;
-    width: 80%;
-    height: 38vh;
-    max-height: 460px;
-    min-height: 240px;
     overflow: hidden;
 }
 
@@ -173,24 +170,54 @@ section .slideshow img {
     position: absolute;
     inset: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+
     opacity: 0;
     transition: opacity .8s ease;
     pointer-events: none;
+    z-index: 1;
 }
 
 section .slideshow img.show {
     opacity: 1;
 }
 
-/* ---------- project 1 */
-#project1 {}
+/* ---------- project 1 ---------- */
+#project1 {
+    margin-bottom: -15%;
+    margin-top: 5%;
+}
 
-/* ---------- project 2 */
+#project1 .project_background{
+    width:100%;
+    height:auto;
+    transform:scaleY(.8);
+    transform-origin:top center;
+}
+
+#project1 .slideshow {
+    top: 60%;
+    left: 66%;
+    transform: translate(-50%, -50%);
+
+    width: 65%;
+    height: 60%;
+}
+
+#project1 .title {
+    left: 25%;
+    top: 18%;
+    transform: scale(.75);
+}
+
+#project1 .btn {
+    bottom: 21%;
+}
+
+/* ---------- project 2 ---------- */
 #project2 {}
 
-/* ---------- gallery */
+/* ---------- gallery ---------- */
 #gallery {}
 
 /* button */
