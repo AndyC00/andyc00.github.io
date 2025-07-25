@@ -209,8 +209,9 @@ section .slideshow img.show {
 
 #project1 .slideshow {
     top: 60%;
-    left: 66%;
+    left: 63.5%;
     transform: translate(-50%, -50%);
+    clip-path: inset(0 3% 0 3%);
 
     width: 65%;
     height: 60%;
