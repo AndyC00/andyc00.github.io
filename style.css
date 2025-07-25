@@ -103,14 +103,14 @@ nav a::before {
 .about .Portrait {
     position:absolute;
     left: 52%;
-    top: 54%;
+    top: 57.8%;
     transform: translate(-50%, -50%);
     height: 60%;
     width: auto;
     object-fit:cover;
     overflow: hidden;
+    clip-path: inset(0 0 10% 0);
     z-index:1;
-    border-radius:12px;
 }
 
 .about .texts {
