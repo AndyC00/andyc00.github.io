@@ -13,10 +13,10 @@ body {
     font-family: system-ui, sans-serif;
     /*font (might need to modify later on)*/
 
-    background: url("_assets/Background_decorateArrow.png") center no-repeat,
-                url("_assets/Background_leftside.png") center no-repeat,
-                url("_assets/planet.png") center no-repeat,
-                url("_assets/Background.png") center no-repeat;
+    background: url("_assets/Website/Background_decorateArrow.png") center no-repeat,
+                url("_assets/Website/Background_leftside.png") center no-repeat,
+                url("_assets/Website/planet.png") center no-repeat,
+                url("_assets/Website/Background.png") center no-repeat;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-position: center center, center center, center calc(50% + 45vh), center center;
     background-size: 100vw auto, 100vw auto, 100vw auto, cover;
@@ -77,7 +77,7 @@ nav a::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: url("_assets/index_block.png") center / contain no-repeat;
+    background: url("_assets/Website/index_block.png") center / contain no-repeat;
     z-index: -1;
 }
 
@@ -96,7 +96,7 @@ nav a::before {
     position: relative;
     flex: 0 0 412px;
     aspect-ratio: 439/412;
-    background: url("_assets/PortraitBackground.png") center / contain no-repeat;
+    background: url("_assets/Website/PortraitBackground.png") center / contain no-repeat;
     z-index: 0;
 }
 
@@ -157,7 +157,7 @@ section .title {
     left: 25%;
     padding: .25em .75em;
 
-    background: url("_assets/project_block.png") center / 100% 100% no-repeat;
+    background: url("_assets/Website/project_block.png") center / 100% 100% no-repeat;
     font-size: clamp(1.25rem, 2vw + .5rem, 2.5rem);
     z-index: 2;
 }
@@ -167,7 +167,7 @@ section .btn {
     bottom: 4%;
     right: 10%;
 
-    background: url("_assets/project_block.png") center / 100% 100% no-repeat;
+    background: url("_assets/Website/project_block.png") center / 100% 100% no-repeat;
     color: #fff;
     padding: .75rem 1.5rem;
     border-radius: 0;
