@@ -244,18 +244,19 @@ section .slideshow img.show {
 }
 
 #gallery .slideshow {
-    top: 84%;
-    left: 59%;
-    transform: translate(-50%, -50%);
+    top: 33.5%;
+    left: 41.5%;
 
-    height: 100%;
+    height: 65%;
     width: 35%;
+    max-height: 100%;
 }
 
 #gallery .btn {
     right: 15%;
 }
 
+/* ---------- other elements ---------- */
 .footer {
     margin-top: 10rem;
     font-size: 12px;
