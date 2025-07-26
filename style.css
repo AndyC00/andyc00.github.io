@@ -233,6 +233,16 @@ section .slideshow img.show {
 /* ---------- gallery ---------- */
 #gallery {}
 
+.footer {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.footer a{
+    color: #0079fb;
+    text-decoration: none;
+}
+
 /* button */
 .btn {
     display: inline-block;
