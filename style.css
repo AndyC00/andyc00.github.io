@@ -231,9 +231,33 @@ section .slideshow img.show {
 #project2 {}
 
 /* ---------- gallery ---------- */
-#gallery {}
+#gallery .title{
+    left: 30%;
+    top: 25%;
+}
+
+#gallery .project_background{
+    width:100%;
+    height:auto;
+    transform:scaleX(.65);
+    transform-origin:top center;
+}
+
+#gallery .slideshow {
+    top: 84%;
+    left: 59%;
+    transform: translate(-50%, -50%);
+
+    height: 100%;
+    width: 35%;
+}
+
+#gallery .btn {
+    right: 15%;
+}
 
 .footer {
+    margin-top: 10rem;
     font-size: 12px;
     font-weight: bold;
 }
