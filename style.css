@@ -225,6 +225,7 @@ section .slideshow img.show {
 
 #project1 .btn {
     bottom: 21%;
+    transform: scale(.75);
 }
 
 /* ---------- project 2 ---------- */
@@ -233,7 +234,8 @@ section .slideshow img.show {
 /* ---------- gallery ---------- */
 #gallery .title{
     left: 30%;
-    top: 25%;
+    top: 23%;
+    transform: scale(.75);
 }
 
 #gallery .project_background{
@@ -254,11 +256,11 @@ section .slideshow img.show {
 
 #gallery .btn {
     right: 15%;
+    transform: scale(.75);
 }
 
 /* ---------- other elements ---------- */
 .footer {
-    margin-top: 10rem;
     font-size: 12px;
     font-weight: bold;
 }
