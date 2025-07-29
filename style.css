@@ -17,7 +17,7 @@ body {
                 url("_assets/Website/Background_leftside.png") center no-repeat,
                 url("_assets/Website/planet.png") center no-repeat,
                 url("_assets/Website/Background.png") center no-repeat;
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-repeat: repeat-y, repeat-y, no-repeat, repeat-y;
     background-position: center center, center center, center calc(50% + 45vh), center center;
     background-size: 100vw auto, 100vw auto, 100vw auto, cover;
     background-attachment: scroll, scroll, fixed, scroll;
