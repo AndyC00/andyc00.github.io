@@ -21,6 +21,8 @@ body {
     background-position: center center, center center, center calc(50% + 45vh), center center;
     background-size: 100vw auto, 100vw auto, 100vw auto, cover;
     background-attachment: scroll, scroll, fixed, scroll;
+
+    cursor: url("_assets/Others/CursorIcon.png"), auto;
 }
 
 p.limited {
