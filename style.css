@@ -22,7 +22,11 @@ body {
     background-size: 100vw auto, 100vw auto, 100vw auto, cover;
     background-attachment: scroll, scroll, fixed, scroll;
 
-    cursor: url("_assets/Others/CursorIcon.png"), auto;
+    cursor: url("_assets/Others/cursor_32.png"), auto;
+}
+
+a[href] {
+    cursor: inherit;
 }
 
 p.limited {
