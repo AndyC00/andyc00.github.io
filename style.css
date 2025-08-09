@@ -335,14 +335,19 @@ section .slideshow img.show {
 
 /* ---------- screen size adjustment ---------- */
 
-/* Phone */
-@media (max-width:380px) {
-    html {
-        font-size: 87.5%;
-        /* 14px */
+/* desktop */
+:root {
+    --drifter-size: clamp(90px, 11vw, 160px);
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    :root {
+        --drifter-size: clamp(96px, 16vw, 180px);
     }
 }
 
+/* Phone */
 @media (max-width:600px) {
     nav {
         display: none;
@@ -383,17 +388,11 @@ section .slideshow img.show {
     :root {
         --drifter-size: clamp(108px, 20vmin, 200px);
     }
-
 }
 
-/* Tablet */
-@media (max-width: 900px) {
-    :root {
-        --drifter-size: clamp(96px, 16vw, 180px);
+@media (max-width:380px) {
+    html {
+        font-size: 87.5%;
+        /* 14px */
     }
-}
-
-/* desktop */
-:root {
-    --drifter-size: clamp(90px, 11vw, 160px);
 }
