@@ -185,6 +185,12 @@ section .slideshow {
     overflow: hidden;
 }
 
+section .slideshow a {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
 section .slideshow img {
     position: absolute;
     inset: 0;
