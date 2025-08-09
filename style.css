@@ -203,7 +203,7 @@ section .slideshow img.show {
 
 /* ---------- project 1 ---------- */
 #project1 {
-    margin-bottom: -15%;
+    margin-bottom: -5%;
 }
 
 #project1 .project_background{
@@ -242,6 +242,11 @@ section .slideshow img.show {
     transform-origin:top center;
 }
 
+#project2 .title {
+    top: 15%;
+    transform: scale(.85);
+}
+
 #project2 .slideshow {
     top: 54%;
     left: 63%;
@@ -252,14 +257,23 @@ section .slideshow img.show {
     height: 60%;
 }
 
+#project2 .btn {
+    bottom: 30%;
+    transform: scale(.75);
+}
+
+#project2 {
+    margin-bottom: -15%;
+}
+
 /* ---------- gallery ---------- */
-#gallery .title{
+#gallery .title {
     left: 30%;
     top: 23%;
     transform: scale(.75);
 }
 
-#gallery .project_background{
+#gallery .project_background {
     width:100%;
     height:auto;
     transform:scaleX(.65);
