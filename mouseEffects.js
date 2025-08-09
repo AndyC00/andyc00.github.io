@@ -9,13 +9,13 @@
     constructor(opts = {}) {
       // parameters for set up
       this.container = this._resolveContainer(opts.containerSelector) || document.body;
-      this.imgSrc    = opts.imgSrc || "_assets/Others/CursorIcon.png";
-      this.width     = opts.width || "min(10vw, 100px)";
+      this.imgSrc = opts.imgSrc || "_assets/Others/CursorIcon.png";
+      this.width = opts.width || "min(10vw, 100px)";
       this.restitution = opts.restitution ?? 0.98;
-      this.softDrag    = opts.softDrag ?? 0.000;
-      this.jitter      = opts.jitter ?? 8;
-      this.maxSpeed    = opts.maxSpeed ?? 240;
-      this.maxSpin     = opts.maxSpin ?? 30;
+      this.softDrag = opts.softDrag ?? 0.000;
+      this.jitter = opts.jitter ?? 8;
+      this.maxSpeed = opts.maxSpeed ?? 240;
+      this.maxSpin = opts.maxSpin ?? 30;
 
       // random initial velocity
       const iv = opts.initialVelocity || {
@@ -43,15 +43,15 @@
         position: this.container === document.body ? "fixed" : "absolute",
         inset: this.container === document.body ? "0" : "0",
         overflow: "hidden",
-        pointerEvents: "auto",
+        pointerEvents: "none",
         zIndex: 1
       });
 
+      // change to relative to fulfill the layout
       if (this.container !== document.body) {
         const cs = getComputedStyle(this.container);
         if (cs.position === "static") this.container.style.position = "relative";
       }
-
       this.container.appendChild(this.layer);
 
       // take image to the layer
@@ -74,20 +74,28 @@
         filter: "drop-shadow(0 6px 12px rgba(0,0,0,.45))"
       });
 
-      // status
+      // physical status
       this.bounds = { maxX: 0, maxY: 0 };
       this.x = 0; this.y = 0; this.angle = 0;
       this._last = performance.now();
       this._inited = false;
     }
 
+    // recalculate the container size if screen size changed
     _bind() {
       this.ro = new ResizeObserver(() => this._measure());
       this.ro.observe(this.layer);
 
-      // onclick
+      // onclick to push the image
       const impulse = (ev) => {
-        const rect = this.layer.getBoundingClientRect();
+
+        // not trigger when click buttons
+        if (ev.target && ev.target.closest &&
+          ev.target.closest('a,button,[role="button"],input,textarea,select,label,summary,details')) {
+          return;
+        }
+
+        const rect = this.container.getBoundingClientRect();
         const cx = (ev.touches?.[0]?.clientX ?? ev.clientX) - rect.left;
         const cy = (ev.touches?.[0]?.clientY ?? ev.clientY) - rect.top;
         const dx = cx - (this.x + this.img.clientWidth / 2);
@@ -98,18 +106,19 @@
         this.vy += (dy / len) * k;
         this.vr += (Math.random() * 2 - 1) * 12;
       };
-      this.layer.addEventListener("click", impulse, { passive: true });
-      this.layer.addEventListener("touchstart", impulse, { passive: true });
+      document.addEventListener("click", impulse, { passive: true });
+      document.addEventListener("touchstart", impulse, { passive: true });
 
-      // start after decode
+      // start the animation loop
       (this.img.decode?.() ?? Promise.resolve())
-        .catch(() => {})
+        .catch(() => { })
         .finally(() => {
           this._measure();
           requestAnimationFrame((t) => { this._last = t; requestAnimationFrame(this._tick.bind(this)); });
         });
     }
 
+    // count the boundary of the screen
     _measure() {
       const cw = this.layer.clientWidth;
       const ch = this.layer.clientHeight;
@@ -130,20 +139,24 @@
 
     _clamp(v, lo, hi) { return Math.min(Math.max(v, lo), hi); }
 
+    // update
     _tick(now) {
       const dt = (now - this._last) / 1000;
       this._last = now;
 
+      // push a random jitter
       if (this.jitter > 0) {
         this.vx += (Math.random() * 2 - 1) * this.jitter * dt;
         this.vy += (Math.random() * 2 - 1) * this.jitter * dt;
         this.vr += (Math.random() * 2 - 1) * (this.jitter * 0.3) * dt;
       }
 
+      // avoid infinite speed totalization
       this.vx *= (1 - this.softDrag);
       this.vy *= (1 - this.softDrag);
       this.vr *= (1 - this.softDrag);
 
+      // speed limitation
       const sp = Math.hypot(this.vx, this.vy);
       if (sp > this.maxSpeed) {
         const r = this.maxSpeed / sp;
@@ -167,7 +180,7 @@
         this.y = this.bounds.maxY; this.vy = -this.vy * this.restitution; this.vr += (Math.random() * 2 - 1) * 6;
       }
 
-      // apply to the element
+      // render transfrom position
       this.img.style.transform = `translate3d(${this.x}px, ${this.y}px, 0) rotate(${this.angle}deg)`;
 
       requestAnimationFrame(this._tick.bind(this));
