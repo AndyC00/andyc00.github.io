@@ -10,7 +10,7 @@
       // parameters for set up
       this.container = this._resolveContainer(opts.containerSelector) || document.body;
       this.imgSrc = opts.imgSrc || "_assets/Others/CursorIcon.png";
-      this.width = opts.width || "min(10vw, 100px)";
+      this.width = opts.width;
       this.restitution = opts.restitution ?? 0.98;
       this.softDrag = opts.softDrag ?? 0.000;
       this.jitter = opts.jitter ?? 8;
@@ -64,9 +64,9 @@
       }
 
       this.img.classList.add("zero-g-drifter");
+      if (this.width) this.img.style.width = this.width;
       Object.assign(this.img.style, {
         position: "absolute",
-        width: this.width,
         userSelect: "none",
         pointerEvents: "none",
         willChange: "transform",

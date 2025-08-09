@@ -14,9 +14,9 @@ body {
     /*font (might need to modify later on)*/
 
     background: url("_assets/Website/Background_decorateArrow.png") center no-repeat,
-                url("_assets/Website/Background_leftside.png") center no-repeat,
-                url("_assets/Website/planet.png") center no-repeat,
-                url("_assets/Website/Background.png") center no-repeat;
+        url("_assets/Website/Background_leftside.png") center no-repeat,
+        url("_assets/Website/planet.png") center no-repeat,
+        url("_assets/Website/Background.png") center no-repeat;
     background-repeat: repeat-y, repeat-y, no-repeat, repeat-y;
     background-position: center center, center center, center calc(50% + 45vh), center center;
     background-size: 100vw auto, 100vw auto, 100vw auto, cover;
@@ -32,6 +32,10 @@ a[href] {
 p.limited {
     max-width: 50ch;
     overflow-wrap: break-word;
+}
+
+.zero-g-drifter {
+    width: var(--drifter-size);
 }
 
 
@@ -92,7 +96,7 @@ nav a::before {
 .about {
     position: relative;
     display: flex;
-    flex-direction:column; 
+    flex-direction: column;
     align-items: center;
     right: 17%;
     gap: 2rem;
@@ -107,16 +111,16 @@ nav a::before {
 }
 
 .about .Portrait {
-    position:absolute;
+    position: absolute;
     left: 52%;
     top: 57.8%;
     transform: translate(-50%, -50%);
     height: 60%;
     width: auto;
-    object-fit:cover;
+    object-fit: cover;
     overflow: hidden;
     clip-path: inset(0 0 10% 0);
-    z-index:1;
+    z-index: 1;
 }
 
 .about .texts {
@@ -212,11 +216,11 @@ section .slideshow img.show {
     margin-bottom: -5%;
 }
 
-#project1 .project_background{
-    width:100%;
-    height:auto;
-    transform:scaleY(.8);
-    transform-origin:top center;
+#project1 .project_background {
+    width: 100%;
+    height: auto;
+    transform: scaleY(.8);
+    transform-origin: top center;
 }
 
 #project1 .slideshow {
@@ -241,11 +245,11 @@ section .slideshow img.show {
 }
 
 /* ---------- project 2 ---------- */
-#project2 .project_background{
-    width:100%;
-    height:auto;
-    transform:scaleY(.7);
-    transform-origin:top center;
+#project2 .project_background {
+    width: 100%;
+    height: auto;
+    transform: scaleY(.7);
+    transform-origin: top center;
 }
 
 #project2 .title {
@@ -280,10 +284,10 @@ section .slideshow img.show {
 }
 
 #gallery .project_background {
-    width:100%;
-    height:auto;
-    transform:scaleX(.65);
-    transform-origin:top center;
+    width: 100%;
+    height: auto;
+    transform: scaleX(.65);
+    transform-origin: top center;
 }
 
 #gallery .slideshow {
@@ -306,7 +310,7 @@ section .slideshow img.show {
     font-weight: bold;
 }
 
-.footer a{
+.footer a {
     color: #0079fb;
     text-decoration: none;
 }
@@ -330,6 +334,8 @@ section .slideshow img.show {
 
 
 /* ---------- screen size adjustment ---------- */
+
+/* Phone */
 @media (max-width:380px) {
     html {
         font-size: 87.5%;
@@ -373,10 +379,21 @@ section .slideshow img.show {
     section {
         width: 100%;
     }
+
+    :root {
+        --drifter-size: clamp(108px, 20vmin, 200px);
+    }
+
 }
 
-@media (max-width: 768px) {
-    section .project_background {
-        width: 100%;
+/* Tablet */
+@media (max-width: 900px) {
+    :root {
+        --drifter-size: clamp(96px, 16vw, 180px);
     }
+}
+
+/* desktop */
+:root {
+    --drifter-size: clamp(90px, 11vw, 160px);
 }
