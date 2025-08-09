@@ -235,7 +235,22 @@ section .slideshow img.show {
 }
 
 /* ---------- project 2 ---------- */
-#project2 {}
+#project2 .project_background{
+    width:100%;
+    height:auto;
+    transform:scaleY(.7);
+    transform-origin:top center;
+}
+
+#project2 .slideshow {
+    top: 54%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    clip-path: inset(0 3% 0 3%);
+
+    width: 65%;
+    height: 60%;
+}
 
 /* ---------- gallery ---------- */
 #gallery .title{
