@@ -1,6 +1,6 @@
 // todo:
 // 1. mouse icon changed ✔
-//      1.1 mouse icon on phone: move around like within space envrionment
+//      1.1 mouse icon on phone: move around like within space envrionment ✔
 // 2. On mouse click animation
 // 3. On mouse click sound
 
@@ -64,7 +64,7 @@
       }
 
       this.img.classList.add("zero-g-drifter");
-      if (this.width) this.img.style.width = this.width;
+      this.img.style.width = this.width || 'var(--drifter-size)'; //use the size defined in css
       Object.assign(this.img.style, {
         position: "absolute",
         userSelect: "none",
@@ -85,6 +85,9 @@
     _bind() {
       this.ro = new ResizeObserver(() => this._measure());
       this.ro.observe(this.layer);
+
+      this.io = new ResizeObserver(() => this._measure());
+      this.io.observe(this.img);
 
       // onclick to push the image
       const impulse = (ev) => {

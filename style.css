@@ -337,13 +337,13 @@ section .slideshow img.show {
 
 /* desktop */
 :root {
-    --drifter-size: clamp(90px, 11vw, 160px);
+    --drifter-size: clamp(65px, 8vw, 100px);
 }
 
 /* Tablet */
 @media (max-width: 900px) {
     :root {
-        --drifter-size: clamp(96px, 16vw, 180px);
+        --drifter-size: clamp(60px, 8vw, 90px);
     }
 }
 
@@ -386,7 +386,7 @@ section .slideshow img.show {
     }
 
     :root {
-        --drifter-size: clamp(108px, 20vmin, 200px);
+        --drifter-size: clamp(56px, 16vmin, 96px);
     }
 }
 
