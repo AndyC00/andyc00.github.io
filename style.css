@@ -211,6 +211,19 @@ section .slideshow img.show {
     opacity: 1;
 }
 
+/* ---------- Audio Player ---------- */
+.audio-player { display:inline-flex; align-items:center; gap:0.6rem; }
+
+.audio-player .btn {
+  width: 36px; height: 36px;
+  border: 0; border-radius: 999px;
+  background: center / 70% no-repeat;
+  cursor: pointer;
+}
+
+.audio-player .play { background-image: url('_assets/Others/play.png'); }
+.audio-player .pause { background-image: url('_assets/Others/pause.png'); }
+
 /* ---------- project 1 ---------- */
 #project1 {
     margin-bottom: -5%;
