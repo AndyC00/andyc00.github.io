@@ -6,3 +6,15 @@ window.addEventListener('DOMContentLoaded', () => {
     jitter: 8
   });
 });
+
+// mouse click effect init:
+window.addEventListener('DOMContentLoaded', () => {
+  new ClickFade({
+    imgSrc: "_assets/Others/MouseEffect.png", 
+    size: 40,
+    duration: 1000,
+    scaleFrom: 1.0,
+    scaleTo: 1.4,
+    onlyLeftClick: true
+  });
+});
