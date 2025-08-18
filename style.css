@@ -221,7 +221,7 @@ section .slideshow img.show {
 
     /* properties */
     --buttonSize: 36px;
-    --buttonGap: 36px;
+    --buttonGap: -5px;
 }
 
 .audio-player .status {
@@ -239,11 +239,15 @@ section .slideshow img.show {
 }
 
 .audio-player .play { 
+    position: relative;
     background-image: url('_assets/Others/play.png'); 
-    right: calc(var(--buttonGap) + var(--buttonSize));
+    right: var(--buttonGap);
 }
 
-.audio-player .pause { background-image: url('_assets/Others/pause.png'); }
+.audio-player .pause {
+    position: relative;
+    background-image: url('_assets/Others/pause.png'); 
+}
 
 /* ---------- project 1 ---------- */
 #project1 {
@@ -371,13 +375,13 @@ section .slideshow img.show {
 
 /* desktop */
 :root {
-    --drifter-size: clamp(30px, 8vw, 60px);
+    --drifter-size: clamp(30px, 8vw, 50px);
 }
 
 /* Tablet */
 @media (max-width: 900px) {
     :root {
-        --drifter-size: clamp(25px, 9vmin, 40px);
+        --drifter-size: clamp(30px, 9vmin, 37px);
     }
 }
 
@@ -420,7 +424,7 @@ section .slideshow img.show {
     }
 
     :root {
-        --drifter-size: clamp(20px, 8vmin, 35px);
+        --drifter-size: clamp(25px, 8vmin, 35px);
     }
 }
 
