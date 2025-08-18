@@ -216,10 +216,17 @@ section .slideshow img.show {
     display:inline-flex; 
     align-items:center; 
     gap:0.6rem; 
+    position: fixed;
+    right: 50px;
 
     /* properties */
     --buttonSize: 36px;
     --buttonGap: 36px;
+}
+
+.audio-player .status {
+  color: rgb(145, 155, 250);
+  font-size: 13px;
 }
 
 .audio-player button {
@@ -229,8 +236,6 @@ section .slideshow img.show {
   border-radius: 5px;
   background: center / 70% no-repeat;
   cursor: inherit;
-  position: fixed;
-  right: 40px;
 }
 
 .audio-player .play { 

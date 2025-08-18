@@ -5,6 +5,7 @@
     players.forEach(player => {
         const playBtn = player.querySelector('.play');
         const pauseBtn = player.querySelector('.pause');
+        const statusText = player.querySelector('.status');
 
         let audio = player.querySelector('audio');
         if (!audio) {
@@ -21,8 +22,14 @@
         }
         audio.volume = 0.7; // default volume set
 
+        // status update
         const updateButtons = () => {
             const isPaused = audio.paused;
+
+            if(statusText)
+            {
+                statusText.textContent = isPaused ? 'Background Music stopped' : 'Background Music is playing...';
+            }
         };
 
         // button events

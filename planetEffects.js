@@ -1,9 +1,3 @@
-// todo:
-// 1. mouse icon changed ✔
-//      1.1 mouse icon on phone: move around like within space envrionment ✔
-// 2. On mouse click animation
-// 3. On mouse click sound
-
 (() => {
   class ZeroGDrifter {
     constructor(opts = {}) {
