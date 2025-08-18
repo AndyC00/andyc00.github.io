@@ -29,7 +29,7 @@
         container
       };
 
-      // reduce animation in system
+      // reduce animation in system if the user's system set to
       this.reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ?? false;
 
       // preload image
