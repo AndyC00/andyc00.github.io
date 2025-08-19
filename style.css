@@ -231,7 +231,7 @@ section .slideshow img.show {
 
     /* properties */
     --buttonSize: 36px;
-    --buttonGap: -5px;
+    --buttonGap: 0px;
 }
 
 .audio-player .status {
