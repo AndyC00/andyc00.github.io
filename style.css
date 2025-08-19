@@ -23,6 +23,16 @@ body {
     background-attachment: scroll, scroll, fixed, scroll;
 
     cursor: url("_assets/Others/cursor_32.png"), auto;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 a[href] {
@@ -112,8 +122,8 @@ nav a::before {
 
 .about .Portrait {
     position: absolute;
-    left: 52%;
-    top: 57.8%;
+    left: 51%;
+    top: 57%;
     transform: translate(-50%, -50%);
     height: 60%;
     width: auto;
