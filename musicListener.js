@@ -5,7 +5,7 @@ const audioCtx = new AudioCtx();
 // make sure to get GainNode
 function ensureGainNodeFor(audio, initial = 0.7) {
   if (audio._gainNode) return audio._gainNode;
-  const src  = audioCtx.createMediaElementSource(audio); // 同一个 audio 只能建一次
+  const src = audioCtx.createMediaElementSource(audio); // 同一个 audio 只能建一次
   const gain = audioCtx.createGain();
   gain.gain.value = initial;
   src.connect(gain).connect(audioCtx.destination);
@@ -46,9 +46,9 @@ function smoothFadeOutAndPause(audio, sec = 0.5) {
   const players = document.querySelectorAll('.audio-player');
 
   players.forEach(player => {
-    const playBtn   = player.querySelector('.play');
-    const pauseBtn  = player.querySelector('.pause');
-    const statusEl  = player.querySelector('.status');
+    const playBtn = player.querySelector('.play');
+    const pauseBtn = player.querySelector('.pause');
+    const statusEl = player.querySelector('.status');
 
     let audio = player.querySelector('audio');
     if (!audio) {
@@ -71,6 +71,8 @@ function smoothFadeOutAndPause(audio, sec = 0.5) {
           ? 'Background Music stopped'
           : 'Background Music is playing...';
       }
+      if (playBtn) playBtn.hidden = !isPaused;
+      if (pauseBtn) pauseBtn.hidden = isPaused;
     };
 
     // fade in & out events
@@ -93,8 +95,8 @@ function smoothFadeOutAndPause(audio, sec = 0.5) {
       });
       updateButtons();
     });
-    audio.addEventListener('pause',  updateButtons);
-    audio.addEventListener('ended',  updateButtons);
+    audio.addEventListener('pause', updateButtons);
+    audio.addEventListener('ended', updateButtons);
 
     updateButtons();
   });
