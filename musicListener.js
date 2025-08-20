@@ -5,7 +5,7 @@ const audioCtx = new AudioCtx();
 // make sure to get GainNode
 function ensureGainNodeFor(audio, initial = 0.7) {
   if (audio._gainNode) return audio._gainNode;
-  const src = audioCtx.createMediaElementSource(audio); // 同一个 audio 只能建一次
+  const src = audioCtx.createMediaElementSource(audio);
   const gain = audioCtx.createGain();
   gain.gain.value = initial;
   src.connect(gain).connect(audioCtx.destination);
