@@ -357,6 +357,7 @@ section .slideshow img.show {
 .footer {
     font-size: 12px;
     font-weight: bold;
+    margin-top: 10%;
 }
 
 .footer a {
