@@ -60,6 +60,7 @@ nav {
     flex-direction: column;
     align-items: flex-end;
     gap: 4rem;
+    z-index: 3;
 }
 
 .NavBackground {
@@ -228,7 +229,7 @@ section .slideshow img.show {
     gap:0.6rem; 
     position: fixed;
     right: 50px;
-    z-index: 1000;
+    z-index: 5;
 
     /* properties */
     --buttonSize: 36px;
