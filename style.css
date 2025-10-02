@@ -198,6 +198,7 @@ section .btn {
 section .slideshow {
     position: absolute;
     overflow: hidden;
+    background-color: transparent;
 }
 
 section .slideshow a {
@@ -210,7 +211,10 @@ section .slideshow img {
     position: absolute;
     inset: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background-color: inherit;
 
     opacity: 0;
     transition: opacity .8s ease;
@@ -261,6 +265,26 @@ section .slideshow img.show {
     background-image: url('_assets/Others/pause.png'); 
 }
 
+/* ---------- project 0 ---------- */
+#project0 .project_background {
+    transform: scaleY(.95);
+}
+
+#project0 .title {
+    left: 22%;
+    top: 22%;
+    transform: scale(.75);
+}
+
+#project0 .slideshow {
+    top: 60%;
+    left: 63.5%;
+    transform: translate(-51.5%, -48%);
+
+    width: 60%;
+    height: 60%;
+}
+
 /* ---------- project 1 ---------- */
 #project1 {
     margin-bottom: -5%;
@@ -274,9 +298,7 @@ section .slideshow img.show {
 }
 
 #project1 .slideshow {
-    top: 60%;
-    left: 63.5%;
-    transform: translate(-50%, -50%);
+    transform: translate(47%, -133%);
     clip-path: inset(0 3% 0 3%);
 
     width: 65%;
@@ -308,9 +330,7 @@ section .slideshow img.show {
 }
 
 #project2 .slideshow {
-    top: 54%;
-    left: 63%;
-    transform: translate(-50%, -50%);
+    transform: translate(47%, -142%);
     clip-path: inset(0 3% 0 3%);
 
     width: 65%;
@@ -341,7 +361,7 @@ section .slideshow img.show {
 }
 
 #gallery .slideshow {
-    top: 33.5%;
+    top: 30%;
     left: 41.5%;
 
     height: 65%;
