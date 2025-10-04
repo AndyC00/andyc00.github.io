@@ -486,7 +486,7 @@ section .slideshow img.show {
 }
 
 @media (max-width:430px) {
-    :is(#project0, #project1, #project2, #gallery) .slideshow {
+    :is(#project1, #project2, #gallery) .slideshow {
         top: calc(var(--slide-top, 0%) - 6.7%);
     }
 
@@ -495,16 +495,18 @@ section .slideshow img.show {
     }
 
     #project0 .slideshow {
+        top: calc(var(--slide-top, 0%) - 7.5%);
         height: 48.5%;
     }
 }
 
 @media (max-width:390px) {
-    :is(#project0, #project1, #project2, #gallery) .slideshow {
+    :is(#project1, #project2, #gallery) .slideshow {
         top: calc(var(--slide-top, 0%) - 7%);
     }
 
     #project0 .slideshow {
+        top: calc(var(--slide-top, 0%) - 8%);
         height: 45%;
     }
 
@@ -514,7 +516,7 @@ section .slideshow img.show {
 }
 
 @media (max-width:380px) {
-    :is(#project0, #project1, #project2, #gallery) .slideshow {
+    :is(#project1, #project2, #gallery) .slideshow {
         top: calc(var(--slide-top, 0%) - 8%);
     }
 
@@ -524,12 +526,13 @@ section .slideshow img.show {
     }
 
     #project0 .slideshow {
+        top: calc(var(--slide-top, 0%) - 9%);
         height: 43%;
     }
 }
 
 @media (max-width:350px) {
-    :is(#project0, #project1, #project2, #gallery) .slideshow {
+    :is(#project1, #project2, #gallery) .slideshow {
         top: calc(var(--slide-top, 0%) - 9%);
     }
 
@@ -538,12 +541,18 @@ section .slideshow img.show {
     }
 
     #project0 .slideshow {
+        top: calc(var(--slide-top, 0%) - 10%);
         height: 42%;
     }
 }
 
 @media (max-width:340px) {
-    :is(#project0, #project1, #project2, #gallery) .slideshow {
+    :is(#project1, #project2, #gallery) .slideshow {
         top: calc(var(--slide-top, 0%) - 10%);
+    }
+
+    #project0 .slideshow {
+        top: calc(var(--slide-top, 0%) - 10.5%);
+        height: 41%;
     }
 }
