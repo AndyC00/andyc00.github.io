@@ -357,8 +357,7 @@ section .slideshow img.show {
 #gallery .title {
     left: 30%;
     top: 23%;
-    transform: translate(-50%, -50%);
-    transform: scale(.75);
+    transform: translate(-50%, -50%) scale(.75);
 }
 
 #gallery .project_background {
@@ -470,7 +469,7 @@ section .slideshow img.show {
 }
 
 @media (max-width:420px) {
-    section .slideshow {
+    :is(#project0, #project1, #project2, #gallery) section .slideshow {
         top: calc(var(--slide-top, 0%) - 10%);
     }
 }
