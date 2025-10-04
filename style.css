@@ -277,12 +277,12 @@ section .slideshow img.show {
 }
 
 #project0 .slideshow {
-    top: 60%;
+    top: 62%;
     left: 63.5%;
-    transform: translate(-51.5%, -48%);
+    transform: translate(-50%, -50%);
 
     width: 60%;
-    height: 60%;
+    height: 57.5%;
 }
 
 /* ---------- project 1 ---------- */
@@ -298,7 +298,9 @@ section .slideshow img.show {
 }
 
 #project1 .slideshow {
-    transform: translate(47%, -133%);
+    top: 50%;
+    left: 63%;
+    transform: translate(-50%, -50%);
     clip-path: inset(0 3% 0 3%);
 
     width: 65%;
@@ -330,7 +332,9 @@ section .slideshow img.show {
 }
 
 #project2 .slideshow {
-    transform: translate(47%, -142%);
+    top: 44%;
+    left: 63%;
+    transform: translate(-50%, -50%);
     clip-path: inset(0 3% 0 3%);
 
     width: 65%;
@@ -350,6 +354,7 @@ section .slideshow img.show {
 #gallery .title {
     left: 30%;
     top: 23%;
+    transform: translate(-50%, -50%);
     transform: scale(.75);
 }
 
