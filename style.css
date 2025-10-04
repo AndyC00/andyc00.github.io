@@ -474,7 +474,7 @@ section .slideshow img.show {
 
 @media (max-width:430px) {
     :is(#project0, #project1, #project2, #gallery) .slideshow {
-        top: calc(var(--slide-top, 0%) - 6%);
+        top: calc(var(--slide-top, 0%) - 6.25%);
     }
 
     :is(#project0, #project1, #project2, #gallery) .title {
