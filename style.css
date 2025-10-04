@@ -469,7 +469,7 @@ section .slideshow img.show {
     }
 }
 
-@media (max-width:380px) {
+@media (max-width:420px) {
     section .slideshow {
         top: calc(var(--slide-top, 0%) - 10%);
     }
