@@ -277,7 +277,8 @@ section .slideshow img.show {
 }
 
 #project0 .slideshow {
-    top: 62%;
+    --slide-top: 62%;
+    top: var(--slide-top);
     left: 63.5%;
     transform: translate(-50%, -50%);
 
@@ -298,7 +299,8 @@ section .slideshow img.show {
 }
 
 #project1 .slideshow {
-    top: 50%;
+    --slide-top: 50%;
+    top: var(--slide-top);
     left: 63%;
     transform: translate(-50%, -50%);
     clip-path: inset(0 3% 0 3%);
@@ -332,7 +334,8 @@ section .slideshow img.show {
 }
 
 #project2 .slideshow {
-    top: 44%;
+    --slide-top: 44%;
+    top: var(--slide-top);
     left: 63%;
     transform: translate(-50%, -50%);
     clip-path: inset(0 3% 0 3%);
@@ -366,7 +369,8 @@ section .slideshow img.show {
 }
 
 #gallery .slideshow {
-    top: 30%;
+    --slide-top: 30%;
+    top: var(--slide-top);
     left: 41.5%;
 
     height: 65%;
@@ -462,6 +466,12 @@ section .slideshow img.show {
 
     :root {
         --drifter-size: clamp(25px, 8vmin, 35px);
+    }
+}
+
+@media (max-width:380px) {
+    .slideshow {
+        top: calc(var(--slide-top, 0%) - 10%);
     }
 }
 
