@@ -474,7 +474,7 @@ section .slideshow img.show {
 
 @media (max-width:430px) {
     :is(#project0, #project1, #project2, #gallery) .slideshow {
-        top: calc(var(--slide-top, 0%) - 6.5%);
+        top: calc(var(--slide-top, 0%) - 5%);
     }
 
     :is(#project0, #project1, #project2, #gallery) .title {
@@ -482,17 +482,17 @@ section .slideshow img.show {
     }
 
     #project0 .slideshow {
-        height: 48.5%;
+        height: 45%;
     }
 }
 
 @media (max-width:390px) {
     :is(#project0, #project1, #project2, #gallery) .slideshow {
-        top: calc(var(--slide-top, 0%) - 8%);
+        top: calc(var(--slide-top, 0%) - 7%);
     }
 
     #project0 .slideshow {
-        height: 45%;
+        height: 43%;
     }
 
     #gallery .title {
@@ -502,7 +502,7 @@ section .slideshow img.show {
 
 @media (max-width:380px) {
     :is(#project0, #project1, #project2, #gallery) .slideshow {
-        top: calc(var(--slide-top, 0%) - 9%);
+        top: calc(var(--slide-top, 0%) - 8%);
     }
 
     html {
@@ -511,13 +511,13 @@ section .slideshow img.show {
     }
 
     #project0 .slideshow {
-        height: 43%;
+        height: 40%;
     }
 }
 
 @media (max-width:350px) {
     :is(#project0, #project1, #project2, #gallery) .slideshow {
-        top: calc(var(--slide-top, 0%) - 10%);
+        top: calc(var(--slide-top, 0%) - 9%);
     }
 
     :is(#project0, #project1, #project2, #gallery) .title {
@@ -525,7 +525,7 @@ section .slideshow img.show {
     }
 
     #project0 .slideshow {
-        height: 42%;
+        height: 39%;
     }
 }
 
