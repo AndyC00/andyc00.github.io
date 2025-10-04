@@ -474,15 +474,15 @@ section .slideshow img.show {
 
 @media (max-width:430px) {
     :is(#project0, #project1, #project2, #gallery) .slideshow {
-        top: calc(var(--slide-top, 0%) - 3%);
+        top: calc(var(--slide-top, 0%) - 10%);
     }
 
     :is(#project0, #project1, #project2, #gallery) .title {
-        top: calc(var(--title-top, 0%) - 3%);
+        top: calc(var(--title-top, 0%) - 5%);
     }
 }
 
-@media (max-width:390px) {
+/* @media (max-width:390px) {
     :is(#project0, #project1, #project2, #gallery) .slideshow {
         top: calc(var(--slide-top, 0%) - 5%);
     }
@@ -529,4 +529,4 @@ section .slideshow img.show {
     :is(#project0, #project1, #project2, #gallery) .slideshow {
         top: calc(var(--slide-top, 0%) - 12%);
     }
-}
+} */
