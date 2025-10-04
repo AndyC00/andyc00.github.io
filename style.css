@@ -482,7 +482,8 @@ section .slideshow img.show {
     }
 }
 
-/* @media (max-width:390px) {
+/* 
+@media (max-width:390px) {
     :is(#project0, #project1, #project2, #gallery) .slideshow {
         top: calc(var(--slide-top, 0%) - 5%);
     }
@@ -503,7 +504,6 @@ section .slideshow img.show {
 
     html {
         font-size: 87.5%;
-        /* 14px */
     }
 
     #project0 .slideshow {
@@ -529,4 +529,6 @@ section .slideshow img.show {
     :is(#project0, #project1, #project2, #gallery) .slideshow {
         top: calc(var(--slide-top, 0%) - 12%);
     }
-} */
+} 
+
+*/
