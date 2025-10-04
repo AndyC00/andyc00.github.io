@@ -470,7 +470,7 @@ section .slideshow img.show {
 }
 
 @media (max-width:380px) {
-    .slideshow {
+    section .slideshow {
         top: calc(var(--slide-top, 0%) - 10%);
     }
 }
