@@ -6,6 +6,8 @@
 
 html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
@@ -19,7 +21,7 @@ body {
         url("_assets/Website/Background.png") center no-repeat;
     background-repeat: repeat-y, repeat-y, no-repeat, repeat-y;
     background-position: center center, center center, center calc(50% + 30vh), center center;
-    background-size: 100vw auto, 100vw auto, 100vw auto, cover;
+    background-size: 100% auto, 100% auto, 100% auto, cover;
     background-attachment: scroll, scroll, fixed, scroll;
 
     cursor: url("_assets/Others/cursor_32.png"), auto;
@@ -421,6 +423,17 @@ section .slideshow img.show {
 /* desktop */
 :root {
     --drifter-size: clamp(30px, 8vw, 50px);
+}
+
+/* stablize vertical position */
+@supports (height: 100svh) {
+  body {
+    background-position:
+      center center,
+      center center,
+      center calc(50% + 30svh),
+      center center;
+  }
 }
 
 /* Tablet */
