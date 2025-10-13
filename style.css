@@ -16,9 +16,9 @@ body {
     /*font (might need to modify later on)*/
 
     background: url("_assets/Website/Background_decorateArrow.png") center no-repeat,
-        url("_assets/Website/Background_leftside.png") center no-repeat,
-        url("_assets/Website/planet2.png") center no-repeat,
-        url("_assets/Website/Background.png") center no-repeat;
+                url("_assets/Website/Background_leftside.png") center no-repeat,
+                url("_assets/Website/planet2.png") center no-repeat,
+                url("_assets/Website/Background.png") center no-repeat;
     background-repeat: repeat-y, repeat-y, no-repeat, repeat-y;
     background-position: center center, center center, center calc(50% + 30vh), center center;
     background-size: 100% auto, 100% auto, 100% auto, cover;
@@ -61,7 +61,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 4rem;
+    gap: 3rem;
     z-index: 3;
 }
 
@@ -267,19 +267,19 @@ section .slideshow img.show {
     background-image: url('_assets/Others/pause.png');
 }
 
-/* ---------- project 0 ---------- */
-#project0 .project_background {
-    transform: scaleY(.95);
+/* ---------- project habit tracker ---------- */
+#project-habit-tracker .project_background {
+    transform: scaleY(.9);
 }
 
-#project0 .title {
-    --title-top: 22%;
+#project-habit-tracker .title {
+    --title-top: 24%;
     top: var(--title-top);
     left: 22%;
     transform: scale(.75);
 }
 
-#project0 .slideshow {
+#project-habit-tracker .slideshow {
     --slide-top: 62%;
     top: var(--slide-top);
     left: 63.5%;
@@ -289,19 +289,45 @@ section .slideshow img.show {
     height: 57.5%;
 }
 
-/* ---------- project 1 ---------- */
-#project1 {
+#project-habit-tracker .btn {
+    bottom: 5%;
+}
+
+/* ---------- project react ---------- */
+#project-react .project_background {
+    transform: scaleY(.95);
+}
+
+#project-react .title {
+    --title-top: 22%;
+    top: var(--title-top);
+    left: 22%;
+    transform: scale(.75);
+}
+
+#project-react .slideshow {
+    --slide-top: 62%;
+    top: var(--slide-top);
+    left: 63.5%;
+    transform: translate(-50%, -50%);
+
+    width: 60%;
+    height: 57.5%;
+}
+
+/* ---------- project tank ---------- */
+#project-tank {
     margin-bottom: -5%;
 }
 
-#project1 .project_background {
+#project-tank .project_background {
     width: 100%;
     height: auto;
     transform: scaleY(.8);
     transform-origin: top center;
 }
 
-#project1 .slideshow {
+#project-tank .slideshow {
     --slide-top: 50%;
     top: var(--slide-top);
     left: 63%;
@@ -312,33 +338,33 @@ section .slideshow img.show {
     height: 60%;
 }
 
-#project1 .title {
+#project-tank .title {
     --title-top: 18%;
     top: var(--title-top);
     left: 25%;
     transform: scale(.75);
 }
 
-#project1 .btn {
+#project-tank .btn {
     bottom: 21%;
-    transform: scale(.75);
+    transform: scale(.85);
 }
 
-/* ---------- project 2 ---------- */
-#project2 .project_background {
+/* ---------- project unity ---------- */
+#project-unity .project_background {
     width: 100%;
     height: auto;
     transform: scaleY(.7);
     transform-origin: top center;
 }
 
-#project2 .title {
+#project-unity .title {
     --title-top: 15%;
     top: var(--title-top);
     transform: scale(.85);
 }
 
-#project2 .slideshow {
+#project-unity .slideshow {
     --slide-top: 44%;
     top: var(--slide-top);
     left: 63%;
@@ -349,12 +375,12 @@ section .slideshow img.show {
     height: 60%;
 }
 
-#project2 .btn {
+#project-unity .btn {
     bottom: 30%;
-    transform: scale(.75);
+    transform: scale(.85);
 }
 
-#project2 {
+#project-unity {
     margin-bottom: -15%;
 }
 
@@ -385,7 +411,7 @@ section .slideshow img.show {
 
 #gallery .btn {
     right: 15%;
-    transform: scale(.75);
+    transform: scale(.85);
 }
 
 /* ---------- other elements ---------- */
@@ -486,26 +512,26 @@ section .slideshow img.show {
 }
 
 @media (max-width:430px) {
-    :is(#project1, #project2, #gallery) .slideshow {
+    :is(#project-tank, #project-unity, #gallery) .slideshow {
         top: calc(var(--slide-top, 0%) - 6.9%);
     }
 
-    :is(#project0, #project1, #project2, #gallery) .title {
+    :is(#project-react, #project-tank, #project-unity, #gallery) .title {
         top: calc(var(--title-top, 0%) - 5%);
     }
 
-    #project0 .slideshow {
+    #project-react .slideshow {
         top: calc(var(--slide-top, 0%) - 9%);
         height: 48.5%;
     }
 }
 
 @media (max-width:390px) {
-    :is(#project1, #project2, #gallery) .slideshow {
+    :is(#project-tank, #project-unity, #gallery) .slideshow {
         top: calc(var(--slide-top, 0%) - 7%);
     }
 
-    #project0 .slideshow {
+    #project-react .slideshow {
         top: calc(var(--slide-top, 0%) - 10%);
         height: 45%;
     }
@@ -516,7 +542,7 @@ section .slideshow img.show {
 }
 
 @media (max-width:380px) {
-    :is(#project1, #project2, #gallery) .slideshow {
+    :is(#project-tank, #project-unity, #gallery) .slideshow {
         top: calc(var(--slide-top, 0%) - 8%);
     }
 
@@ -525,33 +551,33 @@ section .slideshow img.show {
         /* 14px */
     }
 
-    #project0 .slideshow {
+    #project-react .slideshow {
         top: calc(var(--slide-top, 0%) - 10.5%);
         height: 43%;
     }
 }
 
 @media (max-width:350px) {
-    :is(#project1, #project2, #gallery) .slideshow {
+    :is(#project-tank, #project-unity, #gallery) .slideshow {
         top: calc(var(--slide-top, 0%) - 9%);
     }
 
-    :is(#project0, #project1, #project2, #gallery) .title {
+    :is(#project-react, #project-tank, #project-unity, #gallery) .title {
         top: calc(var(--title-top, 0%) - 5%);
     }
 
-    #project0 .slideshow {
+    #project-react .slideshow {
         top: calc(var(--slide-top, 0%) - 11.5%);
         height: 42%;
     }
 }
 
 @media (max-width:340px) {
-    :is(#project1, #project2, #gallery) .slideshow {
+    :is(#project-tank, #project-unity, #gallery) .slideshow {
         top: calc(var(--slide-top, 0%) - 10%);
     }
 
-    #project0 .slideshow {
+    #project-react .slideshow {
         top: calc(var(--slide-top, 0%) - 12%);
         height: 41%;
     }
