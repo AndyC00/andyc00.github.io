@@ -18,3 +18,25 @@ window.addEventListener('DOMContentLoaded', () => {
     onlyLeftClick: true
   });
 });
+
+// center target section when clicking nav anchors
+window.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      // ignore if it's just '#'
+      if (!href || href === '#') return;
+
+      const id = href.slice(1);
+      const target = document.getElementById(id);
+      if (!target) return;
+
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+      // update URL hash without jumping
+      history.pushState(null, '', href);
+    });
+  });
+});
