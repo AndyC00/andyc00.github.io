@@ -294,6 +294,10 @@ section .slideshow img.show {
 }
 
 /* ---------- project react ---------- */
+#project-react {
+    margin-bottom: 7.5%;
+}
+
 #project-react .project_background {
     transform: scaleY(.95);
 }
@@ -316,10 +320,6 @@ section .slideshow img.show {
 }
 
 /* ---------- project tank ---------- */
-#project-tank {
-    margin-bottom: -5%;
-}
-
 #project-tank .project_background {
     width: 100%;
     height: auto;
@@ -339,9 +339,9 @@ section .slideshow img.show {
 }
 
 #project-tank .title {
-    --title-top: 18%;
+    --title-top: 15%;
     top: var(--title-top);
-    left: 25%;
+    left: 18.5%;
     transform: scale(.75);
 }
 
@@ -350,22 +350,27 @@ section .slideshow img.show {
     transform: scale(.85);
 }
 
-/* ---------- project unity ---------- */
-#project-unity .project_background {
+/* ---------- project outlived ---------- */
+#project-outlived {
+    margin-bottom: -5%;
+}
+
+#project-outlived .project_background {
     width: 100%;
     height: auto;
-    transform: scaleY(.7);
+    transform: scaleY(.75);
     transform-origin: top center;
 }
 
-#project-unity .title {
-    --title-top: 15%;
+#project-outlived .title {
+    --title-top: 14%;
     top: var(--title-top);
-    transform: scale(.85);
+    left: 20.5%;
+    transform: scale(.75);
 }
 
-#project-unity .slideshow {
-    --slide-top: 44%;
+#project-outlived .slideshow {
+    --slide-top: 47%;
     top: var(--slide-top);
     left: 63%;
     transform: translate(-50%, -50%);
@@ -375,13 +380,44 @@ section .slideshow img.show {
     height: 60%;
 }
 
-#project-unity .btn {
-    bottom: 30%;
+#project-outlived .btn {
+    bottom: 25%;
     transform: scale(.85);
 }
 
-#project-unity {
-    margin-bottom: -15%;
+/* ---------- project dfd ---------- */
+#project-dfd {
+    margin-bottom: -5%;
+}
+
+#project-dfd .project_background {
+    width: 100%;
+    height: auto;
+    transform: scaleY(.75);
+    transform-origin: top center;
+}
+
+#project-dfd .title {
+    --title-top: 14%;
+    top: var(--title-top);
+    left: 17%;
+    transform: scale(.75);
+}
+
+#project-dfd .slideshow {
+    --slide-top: 47%;
+    top: var(--slide-top);
+    left: 63%;
+    transform: translate(-50%, -50%);
+    clip-path: inset(0 3% 0 3%);
+
+    width: 65%;
+    height: 60%;
+}
+
+#project-dfd .btn {
+    bottom: 25%;
+    transform: scale(.85);
 }
 
 /* ---------- gallery ---------- */
