@@ -24,7 +24,7 @@ body {
     background-size: 100% auto, 100% auto, 100% auto, cover;
     background-attachment: scroll, scroll, fixed, scroll;
 
-    cursor: url("_assets/Others/cursor_32.png"), auto;
+    cursor: url("_assets/Others/CursorIcon.png"), auto;
 
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -37,8 +37,25 @@ img {
     -webkit-user-drag: none;
 }
 
-a[href] {
-    cursor: inherit;
+a,
+a:link,
+a:visited,
+a:hover,
+a:focus {
+  cursor: url("_assets/Others/CursorQuestionMark.png") 8 2, pointer;
+}
+
+/* Keep normal cursor on Navigator links */
+nav a,
+nav a:link,
+nav a:visited,
+nav a:hover,
+nav a:focus {
+  cursor: url("_assets/Others/CursorIcon.png"), auto;
+}
+
+nav.btn:hover, .btn:hover {
+  cursor: url("_assets/Others/CursorQuestionMark.png") 8 2, pointer;
 }
 
 p.limited {
